@@ -1,0 +1,370 @@
+{
+  "data_folder": "C:\\Recon\\Recon_Data",
+  "exclusion_list_path": "C:\\Recon\\Recon_Data\\5_Exclusions\\Exclusions.xlsx",
+  "move_inputs_to_archive": true,
+  "show_do_not_cancel_tabs": false,
+  "orion": {
+    "sheet": null,
+    "columns": {
+      "account": [
+        "Account Number"
+      ],
+      "active": [
+        "Active"
+      ],
+      "custodian": [
+        "Custodian"
+      ],
+      "account_id": [
+        "Account ID"
+      ],
+      "name": [
+        "Name"
+      ],
+      "household": [
+        "Household"
+      ],
+      "account_type": [
+        "Account Type"
+      ],
+      "current_value": [
+        "Current Value"
+      ],
+      "cash_balance": [
+        "Cash Balance"
+      ],
+      "representative": [
+        "Representative Name"
+      ],
+      "cancel_date": [
+        "Cancel Date"
+      ],
+      "download_source": [
+        "Download Source"
+      ]
+    },
+    "required": [
+      "account",
+      "active",
+      "custodian",
+      "cancel_date",
+      "current_value",
+      "cash_balance"
+    ],
+    "active_values": [
+      "True",
+      "Yes",
+      "Y",
+      "1",
+      "Active"
+    ],
+    "inactive_values": [
+      "False",
+      "No",
+      "N",
+      "0",
+      "Inactive"
+    ],
+    "signature": [
+      "Account ID",
+      "Active",
+      "Account Number",
+      "Custodian",
+      "Current Value"
+    ],
+    "sleeve_separator": "_"
+  },
+  "custodians": {
+    "Pershing": {
+      "sheet": null,
+      "orion_custodian_match": [
+        "pershing"
+      ],
+      "columns": {
+        "account": [
+          "Account #"
+        ],
+        "status": [
+          "Status"
+        ],
+        "name": [
+          "Full Name"
+        ],
+        "registration": [
+          "Account Registration Type"
+        ],
+        "account_value": [
+          "Total Account Value"
+        ],
+        "long_market_value": [
+          "Long Market Value"
+        ],
+        "open_date": [
+          "Account Open Date"
+        ],
+        "last_activity": [
+          "Date Of Last Activity"
+        ],
+        "ip_name": [
+          "IP Name"
+        ]
+      },
+      "required": [
+        "account",
+        "status",
+        "long_market_value"
+      ],
+      "footer_markers": [
+        "Disclosures"
+      ],
+      "completeness_checks": [
+        {
+          "preamble_label": "Long Market Value",
+          "column": "long_market_value"
+        }
+      ],
+      "open_status_values": [
+        "Open",
+        "Active",
+        "A",
+        "O"
+      ],
+      "closed_status_values": [
+        "Closed",
+        "Close",
+        "C",
+        "Inactive",
+        "Terminated",
+        "Cancelled",
+        "Canceled"
+      ],
+      "account_pattern": "^(?=.*[0-9])[A-Z0-9]{9}$",
+      "signature": [
+        "Account #",
+        "Status",
+        "IP Name",
+        "Long Market Value"
+      ],
+      "footer_required": true
+    },
+    "Fidelity": {
+      "sheet": null,
+      "signature": [
+        "Account #",
+        "Primary Account Holder",
+        "FBSI Short Name",
+        "Reg Type Code"
+      ],
+      "orion_custodian_match": [
+        "fidelity",
+        "national financial"
+      ],
+      "columns": {
+        "account": [
+          "Account #"
+        ],
+        "name": [
+          "Primary Account Holder"
+        ],
+        "registration": [
+          "Reg Type"
+        ],
+        "account_value": [
+          "Total Account Value"
+        ],
+        "open_date": [
+          "Established Date"
+        ],
+        "last_maintenance": [
+          "Last Maintenance Date"
+        ],
+        "advisor": [
+          "Primary G# Advisor"
+        ]
+      },
+      "required": [
+        "account",
+        "account_value"
+      ],
+      "closed_if_account_contains": [
+        "&"
+      ],
+      "open_status_values": [],
+      "closed_status_values": [],
+      "account_pattern": "^(?=.*[0-9])[A-Z0-9]{9}$",
+      "footer_markers": [
+        "For investment professional use only",
+        "WealthscapeSM",
+        "Fidelity is providing this content",
+        "Please note cash activity",
+        "The content provided herein",
+        "Third party marks are the property",
+        "AI (Accrued Interest)",
+        "Assets Held-Away",
+        "The information for assets not held",
+        "Gain/loss information",
+        "Fidelity Institutional",
+        "©"
+      ],
+      "footer_required": false
+    },
+    "LPL": {
+      "sheet": null,
+      "signature": [
+        "LPL Account Number",
+        "Account Status",
+        "Rep ID",
+        "Sponsor Account"
+      ],
+      "orion_custodian_match": [
+        "lpl"
+      ],
+      "columns": {
+        "account": [
+          "LPL Account Number"
+        ],
+        "status": [
+          "Account Status"
+        ],
+        "name": [
+          "Client Name"
+        ],
+        "registration": [
+          "Account Class"
+        ],
+        "account_value": [
+          "Account Value"
+        ],
+        "open_date": [
+          "Opened"
+        ],
+        "close_date": [
+          "Closed"
+        ],
+        "advisor": [
+          "Rep ID"
+        ]
+      },
+      "required": [
+        "account",
+        "status",
+        "account_value"
+      ],
+      "open_status_values": [
+        "Open",
+        "Active",
+        "A",
+        "O"
+      ],
+      "closed_status_values": [
+        "Closed",
+        "Close",
+        "C",
+        "Inactive",
+        "Terminated",
+        "Cancelled",
+        "Canceled"
+      ],
+      "account_pattern": "^(?=.*[0-9])[A-Z0-9]{8}$"
+    },
+    "Goldman Sachs": {
+      "sheet": null,
+      "signature": [
+        "Account Number",
+        "Status",
+        "Primary Owner",
+        "Previous Day Total Assets"
+      ],
+      "orion_custodian_match": [
+        "goldman"
+      ],
+      "columns": {
+        "account": [
+          "Account Number"
+        ],
+        "status": [
+          "Status"
+        ],
+        "name": [
+          "Account Name"
+        ],
+        "registration": [
+          "Account Type"
+        ],
+        "account_value": [
+          "Previous Day Total Assets"
+        ]
+      },
+      "required": [
+        "account",
+        "status",
+        "account_value"
+      ],
+      "open_status_values": [
+        "Open",
+        "Active",
+        "A",
+        "O"
+      ],
+      "closed_status_values": [
+        "Closed",
+        "Close",
+        "C",
+        "Inactive",
+        "Terminated",
+        "Cancelled",
+        "Canceled"
+      ],
+      "account_pattern": "^(?=.*[0-9])[A-Z0-9]{6,12}$"
+    },
+    "Pontera": {
+      "sheet": null,
+      "signature": [
+        "Account ID",
+        "Account status",
+        "Financial institution",
+        "Client ID"
+      ],
+      "orion_custodian_match": [
+        "pontera"
+      ],
+      "columns": {
+        "account": [
+          "Account ID"
+        ],
+        "status": [
+          "Account status"
+        ],
+        "name": [
+          "Account name"
+        ],
+        "registration": [
+          "Account type"
+        ],
+        "account_value": [
+          "Balance"
+        ],
+        "institution": [
+          "Financial institution"
+        ],
+        "advisor": [
+          "Advisor"
+        ],
+        "ip_name": [
+          "Rep code"
+        ]
+      },
+      "required": [
+        "account",
+        "status",
+        "account_value"
+      ],
+      "open_status_values": [
+        "Account ready"
+      ],
+      "closed_status_values": [],
+      "only_open_status_is_active": true,
+      "account_pattern": "^(?=.*[0-9])[A-Z0-9]{4,20}$"
+    }
+  }
+}
